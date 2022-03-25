@@ -1,0 +1,12 @@
+{
+  "name": "digital-clock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start --server --files '*'"
+  },
+  "keywords": [],
+  "author": "Hotaroo",
+  "license": "MIT"
+}
