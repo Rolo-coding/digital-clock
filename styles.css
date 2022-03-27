@@ -14,7 +14,13 @@ section {
   align-items: center;
   justify-content: center;
   background: #efe7da;
+  padding: 0 8px;
+  transition: all 0.2s ease-in-out;
 }
+section.dark {
+  background: #191919;
+}
+
 section .container {
   display: flex;
   justify-content: center;
@@ -26,10 +32,14 @@ section .container {
   border-radius: 12px;
   position: relative;
 }
+section.dark .container {
+  background: #202023;
+}
+
 section .container .icons i {
   position: absolute;
-  right: 17px;
-  top: 16px;
+  right: 15px;
+  top: 15px;
   height: 30px;
   width: 30px;
   background: #202023;
@@ -40,10 +50,20 @@ section .container .icons i {
   font-size: 13px;
   cursor: pointer;
 }
+section.dark .container .icons i {
+  background: #ffcb77;
+  color: #000;
+}
 .container .icons i.fa-sun {
   opacity: 0;
   pointer-events: none;
 }
+section.dark .container .icons i.fa-sun {
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 16px;
+}
+
 section .container .time {
   display: flex;
   align-items: center;
@@ -62,6 +82,9 @@ section .container .time {
   font-size: 20px;
   font-weight: 700;
 }
+section.dark .time .time__colon .am-pm {
+  color: #fff;
+}
 .time .time__colon .time__text {
   width: 100px;
   height: 100px;
@@ -73,10 +96,17 @@ section .container .time {
   background: #ffcb77;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
+section.dark .time .time__colon .time__text {
+  background: #191919;
+}
 .time .time__colon .time__text,
 .time .time__colon .colon {
   font-size: 35px;
   font-weight: 600;
+}
+section.dark .time .time__colon .time__text,
+section.dark .time .time__colon .colon {
+  color: #fff;
 }
 .time .time__colon .colon {
   font-size: 40px;
