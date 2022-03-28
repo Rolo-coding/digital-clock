@@ -16,9 +16,9 @@ setInterval(() => {
   hour = hour == 0 ? (hour = 12) : hour;
 
   // adding 0 to all value that less than 10
-  sec = sec < 10 ? "0" + sec : sec;
-  min = min < 10 ? "0" + min : min;
-  hour = hour < 10 ? "0" + hour : hour;
+  sec = String(sec).padStart(2, "0");
+  min = String(min).padStart(2, "0");
+  hour = String(hour).padStart(2, "0");
 
   document.querySelector(".hour-num").innerText = hour;
   document.querySelector(".min-num").innerText = min;
